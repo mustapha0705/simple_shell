@@ -32,8 +32,7 @@ int _getline(data_of_program *data)
 
 		/* split lines for \n or ; */
 		i = 0;
-		do
-		{
+		do {
 			array_commands[i] = str_duplicate(_strtok(i ? NULL : buff, "\n;"));
 			/*checks and split for && and || operators*/
 			i = check_logic_ops(array_commands, i, array_operators);
